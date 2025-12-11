@@ -67,7 +67,8 @@ export const articles: Article[] = [
       <p class="mb-6">
         Deixo aqui também, já que falei de democracia, que a cultura e a arte só podem sobreviver de forma saudável em um Estado democrático que respeita os direitos humanos e a cidadania.
       </p>
-    `
+    `,
+    image: "/images/alem-dos-editais.png"
   },
   {
     slug: "do-rumor-a-sintese",
@@ -137,7 +138,8 @@ export const articles: Article[] = [
         Encerramos o encontro! <br>
         Agora, o documento precisa viver no mundo real.
       </p>
-    `
+    `,
+    image: "/images/encontro-nacional.jpg"
   },
   {
     slug: "para-alem-dos-editais",
@@ -181,7 +183,8 @@ export const articles: Article[] = [
       <p class="mb-6">
         Fica a sugestão, entre um sorriso e a esperança de precisão: que tal mandarmos fundir uma placa nova para a Esplanada com o título “Ministério da Cultura e das Artes”?
       </p>
-    `
+    `,
+    image: "/images/ernst-fischer.jpg"
   },
   {
     slug: "colapso-e-ineficiencia",
