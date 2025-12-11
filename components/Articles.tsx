@@ -25,12 +25,10 @@ const Articles: React.FC = () => {
                   <article key={article.slug} className="flex flex-col group cursor-pointer">
                       <div className="h-48 bg-stone-100 mb-6 overflow-hidden relative border border-stone-100">
                            <div className="absolute inset-0 bg-neutral-900 opacity-0 group-hover:opacity-5 transition-opacity"></div>
-                           <div className="w-full h-full flex items-center justify-center text-stone-300 font-serif italic text-lg px-6 text-center">
-                              {article.title}
-                           </div>
+                          
                       </div>
                       <div className="text-xs font-bold text-terracotta-600 uppercase tracking-widest mb-2">Artigo • {article.displayDate}</div>
-                      <h3 className="text-2xl font-serif font-bold text-neutral-900 mb-3 group-hover:text-terracotta-600 transition-colors">
+                      <h3 className="text-3xl font-serif font-bold text-neutral-900 mb-3 group-hover:text-terracotta-600 transition-colors">
                         <Link to={`/artigos/${article.slug}`}>{article.title}</Link>
                       </h3>
                       <p className="text-stone-600 font-light mb-4 line-clamp-3">
