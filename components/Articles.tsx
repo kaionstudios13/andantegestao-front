@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import { articles } from '../data/articles';
 
 const Articles: React.FC = () => {
-  const recentArticles = articles.slice(0, 3);
+  const recentArticles = articles
+    .filter(article => !article.hiddenOnHome)
+    .slice(0, 3);
   const hasArticles = recentArticles.length > 0;
 
   return (

@@ -12,8 +12,8 @@ const ArticleDetail: React.FC = () => {
       <div className="min-h-screen bg-stone-50 flex flex-col items-center justify-center px-6">
         <h2 className="text-3xl font-serif font-bold text-neutral-900 mb-4">Artigo não encontrado</h2>
         <p className="text-stone-600 mb-8">O texto que você está procurando não existe ou foi movido.</p>
-        <Link 
-          to="/artigos" 
+        <Link
+          to="/artigos"
           className="px-6 py-3 bg-neutral-900 text-white font-bold hover:bg-terracotta-600 transition-colors"
         >
           Voltar para artigos
@@ -29,8 +29,8 @@ const ArticleDetail: React.FC = () => {
 
       <article className="max-w-3xl mx-auto px-6 py-16">
         {/* Navigation Back */}
-        <Link 
-          to="/artigos" 
+        <Link
+          to="/artigos"
           className="inline-flex items-center text-stone-500 hover:text-terracotta-600 transition-colors mb-8 font-medium"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
@@ -59,28 +59,42 @@ const ArticleDetail: React.FC = () => {
           </p>
         </header>
 
+        {article.pdfUrl && (
+          <div className="mb-12">
+            <a
+              href={article.pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-terracotta-600 text-white font-bold hover:bg-terracotta-700 transition-colors rounded-lg shadow-sm"
+            >
+              <Share2 className="w-5 h-5 mr-2" />
+              Baixar Documento PDF
+            </a>
+          </div>
+        )}
+
         {/* Article Content */}
-        <div 
+        <div
           className="prose prose-lg prose-stone max-w-none font-light prose-headings:font-serif prose-headings:font-bold prose-headings:text-neutral-900 prose-a:text-terracotta-600 hover:prose-a:text-terracotta-700 prose-strong:font-bold prose-blockquote:border-l-terracotta-600 prose-blockquote:text-stone-600 prose-blockquote:font-serif prose-blockquote:italic"
           dangerouslySetInnerHTML={{ __html: article.contentHtml }}
         />
 
         {/* Article Footer */}
         <footer className="mt-16 pt-8 border-t border-stone-200 flex justify-between items-center">
-          <Link 
-            to="/artigos" 
+          <Link
+            to="/artigos"
             className="text-neutral-900 font-bold hover:text-terracotta-600 transition-colors"
           >
             ← Ler outros textos
           </Link>
-          
-          <button 
+
+          <button
             className="flex items-center text-stone-500 hover:text-neutral-900 transition-colors"
             onClick={() => {
               navigator.share?.({
                 title: article.title,
                 url: window.location.href
-              }).catch(() => {});
+              }).catch(() => { });
             }}
           >
             <Share2 className="w-5 h-5 mr-2" />
@@ -98,8 +112,8 @@ const ArticleDetail: React.FC = () => {
           <p className="text-stone-600 mb-8">
             Acompanhe nossas atualizações e receba novos textos sobre gestão cultural e teatro.
           </p>
-          <a 
-            href="#contato" 
+          <a
+            href="#contato"
             className="inline-block px-8 py-3 border border-neutral-900 text-neutral-900 font-bold hover:bg-neutral-900 hover:text-white transition-colors uppercase tracking-wider text-sm"
           >
             Fale com Marcelo

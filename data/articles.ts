@@ -6,9 +6,60 @@ export interface Article {
   summary: string;
   contentHtml: string;
   image?: string; // Imagem opcional para visualização em lista
+  hiddenOnHome?: boolean;
+  pdfUrl?: string;
 }
 
 export const articles: Article[] = [
+  {
+    slug: "carta-de-fortaleza-2025",
+    title: "CARTA DE FORTALEZA",
+    date: "2025-09-11",
+    displayDate: "11 de setembro de 2025",
+    summary: "Documento síntese do Encontro Nacional de Políticas para o Teatro, realizado em Fortaleza. Uma construção coletiva para o futuro das políticas públicas.",
+    contentHtml: `
+      <p class="mb-6">
+        Embora a arte jamais tenha ocupado um espaço central no debate político, não se pode ignorar que ela representa um campo em que o capitalismo contemporâneo exerce, cada vez mais e com maior voracidade, sua ação predatória.
+      </p>
+      <p class="mb-6">
+        No Brasil atual, marcado por dependência e subordinação típicas de um país periférico, o colonialismo cultural resulta tanto da nossa formação social - caracterizada pela escravização, pela brutalidade e vulgaridade das elites, pela desigualdade social e pelo oligopólio na mídia -, quanto pela ausência de um projeto emancipador radical.
+      </p>
+      <p class="mb-6">
+        Neste país complexo, chocam-se, então, duas concepções de política para as artes:
+      </p>
+      <p class="mb-6">
+        Uma, que reconhece o valor civilizacional da arte e sua contribuição para a emancipação humana, perspectiva que considera arte como prática social que permite a representação e a fabricação do mundo, e que, portanto, deveria ser garantida para o conjunto da população; e outra concepção, que reduz o âmbito e a complexidade do papel da arte, apresentando uma caricatura que transforma bens simbólicos em produtos que se compram e vendem, incluídos na lógica da competitividade e da meritocracia.
+      </p>
+      <p class="mb-6">
+        A visão de arte que defendemos não cabe no figurino do mercado e não pode ser medida pela régua única da mercadoria. Uma política pública para as artes, democrática e popular, deve ser emancipadora e construída de forma coletiva. Ela precisa inverter prioridades, permitindo que setores historicamente excluídos possam ser produtores e fruidores dos bens culturais.
+      </p>
+      <p class="mb-6">
+        Esta visão, sob pena de irrelevância, não pode se furtar à crítica sistêmica do modelo atual. Ela deve mostrar a incompatibilidade entre democratização efetiva e o modelo baseado na produção de mercadorias e geração de lucros.
+      </p>
+      <p class="mb-6">
+        Na certeza de que estamos articulados, uma vez que nos mantemos de pé, criando, mantendo espaços, processos de formação, ações de memória e militando contra o fascismo nas ruas todos os dias, este documento vem convocar: a Fundação Nacional das Artes, as Secretarias e órgãos municipais e estaduais de cultura, para a ação junto às pessoas trabalhadoras de teatro deste país.
+      </p>
+      <p class="mb-6">
+        Cabe salientar que todas as propostas aqui apresentadas têm como eixo transversal a compreensão de que todas as pessoas são iguais perante a lei, sem distinção de qualquer natureza, garantindo às pessoas brasileiras e às pessoas estrangeiras residentes no país a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança, à cultura, ao conhecimento e a arte.
+      </p>
+      <p class="mb-6">
+        Entende-se por todas as pessoas: homens, mulheres, crianças, jovens, idosas, brancas, negras, indígenas, quilombolas, ciganas, amarelas, LGBTQIAPN+ e pessoas Defs.
+      </p>
+      <p class="mb-6">
+        Cabe, portanto, ao poder público garantir os mecanismos de fomento para o desenvolvimento de pesquisa, formação, criação, produção, e apresentação de todas as formas do fazer artístico teatral: o teatro profissional, comunitário, amador, da infância e da juventude, negro, indígena, de rua, de bonecos, LGBTQIAPN+, de pessoas Defs, prisional, independente, de idosos, entre outros.
+      </p>
+      <p class="mb-6">
+        Para tanto é também transversal a certeza de que nenhuma destas propostas é possível sem orçamento público digno, distribuído de forma equânime por todo território nacional, para que possamos ter efetivamente a arte como direito.
+      </p>
+      <p class="mb-6 font-bold text-terracotta-600 text-xl">
+        2% para a cultura já!<br>
+        Viva a arte! Viva o Teatro brasileiro!
+        </p>
+        <p>(Texto continua no documento)</p>
+    `,
+    hiddenOnHome: true,
+    pdfUrl: "/docs/carta-de-fortaleza-2025.pdf"
+  },
   {
     slug: "alem-dos-editais",
     title: "Além dos Editais: notas para um novo paradigma de fomento à cultura e às artes",
