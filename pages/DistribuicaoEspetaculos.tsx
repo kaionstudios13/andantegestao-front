@@ -1,6 +1,8 @@
 import React from 'react';
-import { Truck, ArrowRight, Globe } from 'lucide-react';
+import { Truck } from 'lucide-react';
+import { ArrowRight, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import CopyEmailButton from '../components/CopyEmailButton';
 
 const DistribuicaoEspetaculos: React.FC = () => {
   return (
@@ -8,10 +10,10 @@ const DistribuicaoEspetaculos: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-neutral-900 text-white pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-4 text-terracotta-600">
-            <Truck className="w-8 h-8" />
-            <span className="text-sm font-bold tracking-widest uppercase">Nossas Ações</span>
-          </div>
+          <Link to="/acoes" className="inline-flex items-center gap-4 mb-4 text-terracotta-600 hover:text-terracotta-500 transition-colors group">
+            <Truck className="w-8 h-8 group-hover:scale-110 transition-transform" />
+            <span className="text-sm font-bold tracking-widest uppercase border-b-2 border-transparent group-hover:border-terracotta-500">Nossas Ações</span>
+          </Link>
           <h1 className="text-4xl md:text-6xl font-serif font-bold mb-8">
             Distribuição de Espetáculos
           </h1>

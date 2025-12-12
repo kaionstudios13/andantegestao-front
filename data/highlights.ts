@@ -12,7 +12,7 @@ export const highlights: Highlight[] = [
     slug: "reconhecimento-iberescena",
     category: "Internacional",
     title: 'Reconhecimento "Guillermo Heras"',
-    date: "2025-010-15", 
+    date: "2025-010-15",
     summary: 'Marcelo Bones é o ganhador do Reconhecimento "Guillermo Heras" do Iberescena 2025, prêmio internacional concedido anualmente a um gestor cultural por país.',
     contentHtml: `
       <p class="mb-6">Marcelo Bones foi agraciado com o prestigiado Reconhecimento "Guillermo Heras" do Programa de Cooperação Ibero-Americana Iberescena. Este reconhecimento, que celebra a excelência na gestão e produção cultural no espaço ibero-americano, foi concedido a um gestor por cada país participante do Iberescena neste ano. A honraria é um testemunho da dedicação de Marcelo Bones ao desenvolvimento e circulação das artes cênicas, e reforça o impacto de seu trabalho na consolidação de redes e políticas culturais entre as nações da Ibero-América. </p>
@@ -26,9 +26,9 @@ export const highlights: Highlight[] = [
     category: "Política Cultural",
     title: "Encontro Nacional de Políticas para o Teatro",
     date: "2025-09-12",
-    summary: "O Encontro Nacional de Políticas Públicas para o Teatro reuniu artistas, gestores e pesquisadoras em um processo de escuta e formulação conduzido pela Andante; Gestão de Cultura, fortalecendo debates essenciais para o futuro do setor.",
+    summary: "O Encontro Nacional de Políticas Públicas para o Teatro reuniu artistas, gestores e pesquisadoras em um processo de escuta e formulação conduzido pela Andante - Gestão de Cultura, fortalecendo debates essenciais para o futuro do setor.",
     contentHtml: `
-      <p class="mb-6">O Encontro Nacional de Políticas Públicas para o Teatro foi concebido e estruturado pela Andante; Gestão de Cultura com uma metodologia que uniu rigor, escuta ampla e inteligência coletiva. Desde o início, o processo partiu da compreensão de que o campo teatral brasileiro vive um momento decisivo e necessita de diagnósticos precisos, repertório histórico e práticas de formulação que deem conta da complexidade do setor.</p>
+      <p class="mb-6">O Encontro Nacional de Políticas Públicas para o Teatro foi concebido e estruturado pela Andante - Gestão de Cultura com uma metodologia que uniu rigor, escuta ampla e inteligência coletiva. Desde o início, o processo partiu da compreensão de que o campo teatral brasileiro vive um momento decisivo e necessita de diagnósticos precisos, repertório histórico e práticas de formulação que deem conta da complexidade do setor.</p>
       <p class="mb-6">A Andante assumiu a responsabilidade de articular esse movimento, desenhando um percurso metodológico capaz de reunir vozes diversas e produzir síntese qualificada sem perder a pluralidade de perspectivas.</p>
       <p class="mb-6">A preparação do Encontro envolveu uma extensa etapa de escuta preliminar, conduzida pela Andante, que realizou entrevistas individuais e recebeu contribuições escritas de artistas, gestores, pesquisadores, programadores e representantes de instituições públicas e privadas. Esse material foi tratado como base estruturante para a organização dos eixos temáticos e das dinâmicas de trabalho.</p>
       <p class="mb-6">A metodologia destacou a importância de reconhecer os diferentes lugares de fala, garantindo que as leituras do setor não fossem reduzidas a consensos fáceis, mas se constituíssem como matéria crítica para a construção coletiva.</p>

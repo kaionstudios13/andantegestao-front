@@ -68,7 +68,7 @@ export const articles: Article[] = [
         Deixo aqui também, já que falei de democracia, que a cultura e a arte só podem sobreviver de forma saudável em um Estado democrático que respeita os direitos humanos e a cidadania.
       </p>
     `,
-    image: "/images/alem-dos-editais.png"
+    image: "/images/alem-dos-editais-typewriter.jpg"
   },
   {
     slug: "do-rumor-a-sintese",
@@ -139,7 +139,7 @@ export const articles: Article[] = [
         Agora, o documento precisa viver no mundo real.
       </p>
     `,
-    image: "/images/encontro-nacional.jpg"
+    image: "/images/encontro-nacional-bw.jpg"
   },
   {
     slug: "para-alem-dos-editais",
@@ -184,7 +184,7 @@ export const articles: Article[] = [
         Fica a sugestão, entre um sorriso e a esperança de precisão: que tal mandarmos fundir uma placa nova para a Esplanada com o título “Ministério da Cultura e das Artes”?
       </p>
     `,
-    image: "/images/ernst-fischer.jpg"
+    image: "/images/para-alem-dos-editais-typewriter.jpg"
   },
   {
     slug: "colapso-e-ineficiencia",
