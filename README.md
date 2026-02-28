@@ -1,56 +1,56 @@
 <div align="center">
 
-# Andante — Gestão de Cultura
+# Andante — Cultural Management
 
-Plataforma digital do escritório de gestão cultural de **Marcelo Bones**
+Digital platform for **Marcelo Bones**' cultural management office
 
 </div>
 
 ---
 
-## O que é este projeto
+## What this is
 
-A Andante é o escritório de gestão cultural de Marcelo Bones — dramaturgo, curador e produtor com décadas de atuação nas artes cênicas brasileiras. Este repositório é a plataforma que dá corpo digital a esse trabalho.
+Andante is the cultural management office of Marcelo Bones — a playwright, curator and producer with decades of work in Brazilian performing arts. This repository is the platform that gives that work a digital presence.
 
-Não se trata de um portfólio genérico. A proposta foi construir algo que respeitasse a seriedade da produção cultural sem perder leveza e legibilidade — um ambiente onde textos longos são lidos com conforto, onde a navegação não compete com o conteúdo, e onde quem publica tem autonomia real sem depender de uma equipe técnica toda vez que precisa de uma atualização.
+This isn't a generic portfolio. The goal was to build something that honours the seriousness of cultural production without losing readability — a space where long-form texts are comfortable to read, where navigation doesn't compete with content, and where the author can publish independently without relying on a developer every time.
 
-## Para quem é
+## Who it's for
 
-- **Visitantes e leitores** que acompanham os artigos e reflexões de Marcelo sobre teatro, políticas públicas e processos de criação
-- **Promotores, institutos e parceiros** que precisam conhecer o portfólio e os serviços da Andante
-- **Grupos e coletivos teatrais** que fazem parte da rede de trabalho do escritório
-- **O próprio Marcelo** — que usa o painel administrativo para publicar seus textos de forma independente
+- **Readers and visitors** following Marcelo's articles and reflections on theatre, public policy and creative processes
+- **Promoters, institutions and partners** exploring the office's portfolio and services
+- **Theatre groups and collectives** that are part of Andante's network
+- **Marcelo himself** — who uses the admin panel to publish his writing independently
 
-## O que tem aqui
+## Features
 
-**Área pública**
-- Home institucional com os destaques mais recentes
-- Listagem e leitura de artigos autorais completos
-- Seção de destaques: notícias, agenda e reconhecimentos
-- Páginas de serviço: gestão cultural, oficinas de formação, distribuição de espetáculos
-- Biografia e trajetória de Marcelo Bones
-- Grupos e afiliações
+**Public site**
+- Institutional homepage with recent highlights
+- Full article reading experience
+- Highlights section: news, agenda and recognitions
+- Service pages: cultural management, training workshops, show distribution
+- Biography and career overview
+- Affiliated groups and partnerships
 
-**Painel administrativo** (autenticado)
-- Editor de texto rico (Quill) para criação e edição de artigos e destaques
-- Upload de imagens direto para o Supabase Storage
-- Acesso protegido por autenticação — publicar não requer nenhum conhecimento técnico
+**Admin panel** (authenticated)
+- Rich text editor (Quill) for articles and highlights
+- Cover image upload to Supabase Storage
+- Auth-protected access — publishing requires zero technical knowledge
 
 ## Stack
 
-O projeto foi construído com ferramentas consolidadas e escolhidas pela previsibilidade, não pela novidade:
+Tools chosen for reliability and fit, not trend:
 
 | | |
 |---|---|
-| **React 19 + TypeScript** | Interface e tipagem estática |
-| **Vite 6** | Bundler e servidor de dev |
-| **Tailwind CSS + Typography** | Estilo — sem CSS customizado desnecessário |
-| **Supabase** | Banco PostgreSQL, autenticação e storage em uma só plataforma |
-| **React Router v6** | Roteamento com rotas protegidas |
-| **React Quill New** | Editor WYSIWYG no admin |
-| **DOMPurify** | Sanitização de HTML antes de qualquer renderização |
+| **React 19 + TypeScript** | UI and static typing |
+| **Vite 6** | Bundler and dev server |
+| **Tailwind CSS + Typography** | Styling |
+| **Supabase** | PostgreSQL, auth and storage in one managed platform |
+| **React Router v6** | Routing with protected routes |
+| **React Quill New** | WYSIWYG editor in the admin |
+| **DOMPurify** | HTML sanitisation before any rendering |
 
-## Rodando localmente
+## Getting started
 
 ```bash
 git clone git@github.com:kaionstudios13/andantegestao-front.git
@@ -58,42 +58,44 @@ cd andantegestao-front
 npm install
 ```
 
-Crie um arquivo `.env` na raiz (use o `.env.example` como guia):
+Create a `.env` file at the project root (see `.env.example`):
 
 ```env
-VITE_SUPABASE_URL=https://seu-projeto.supabase.co
-VITE_SUPABASE_ANON_KEY=sua-anon-key
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
 ```
 
 ```bash
 npm run dev   # http://localhost:3000
 ```
 
-## Decisões que valem mencionar
+## Notable decisions
 
-**Por que Supabase e não um backend próprio?** — O escopo do projeto não justificava manter uma API separada. O Supabase entrega autenticação, banco relacional e storage num único serviço gerenciado, com RLS para garantir que regras de acesso vivam no banco — não só no front-end.
+**Supabase over a custom backend** — The scope didn't justify a separate API. Supabase provides auth, a relational database and file storage in a single managed service, with Row Level Security keeping access rules at the database level rather than only in the front-end.
 
-**Por que não usar CMS como Contentful ou Sanity?** — Custo e complexidade desnecessários para o volume de publicações previsto. O painel admin construído aqui é enxuto, centrado no que Marcelo realmente precisa: escrever e publicar.
+**No CMS (Contentful, Sanity, etc.)** — Unnecessary cost and complexity for the expected publishing volume. The admin panel built here is lean and focused on exactly what's needed: write and publish.
 
-**XSS e RLS** — O conteúdo dos artigos é HTML gerado pelo editor Quill e armazenado no banco. Antes de qualquer renderização, passa por `DOMPurify.sanitize()`. As tabelas do banco têm RLS habilitado: leitura é pública, escrita é restrita a usuários autenticados.
+**XSS and RLS** — Article content is HTML produced by the Quill editor and stored in the database. Before any rendering it passes through `DOMPurify.sanitize()`. All tables have RLS enabled: public read, authenticated-only write.
 
-## Estrutura resumida
+## Project structure
 
 ```
 andantegestao-front/
-├── pages/             # Páginas públicas (artigos, destaques, home…)
-├── components/        # Header, Footer, Layout e componentes visuais
+├── pages/             # Public pages (articles, highlights, home…)
+├── components/        # Header, Footer, Layout and UI components
 ├── src/
 │   ├── components/admin/   # ProtectedRoute, AdminLayout
 │   ├── contexts/           # AuthContext
 │   ├── pages/admin/        # Login, Dashboard, ArticleEditor, HighlightEditor
-│   └── supabase.ts         # Cliente Supabase
-├── App.tsx            # Definição de rotas
-└── vite.config.ts     # Configuração do build
+│   └── supabase.ts         # Supabase client
+├── App.tsx            # Route definitions
+└── vite.config.ts     # Build configuration
 ```
 
 ---
 
+> 📄 [Leia em Português](./README.pt-BR.md)
+
 <div align="center">
-  <sub>Andante — Gestão de Cultura · 2026</sub>
+  <sub>Andante — Cultural Management · 2026</sub>
 </div>
